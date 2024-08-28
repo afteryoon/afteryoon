@@ -4,8 +4,6 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&color=BDBDC8&height=150&section=header" />
 </div>
 
-
-
 ## 🛠 Skills
 
 ### Languages
@@ -29,14 +27,11 @@
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 
-## 📊 GitHub Stats
+## 📊 Stats
 
 <div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=afteryoon&show_icons=true&theme=dark&include_all_commits=true&count_private=true"/>
   <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=afteryoon&layout=compact&langs_count=8&theme=dark"/>
 </div>
-
-## 🏆 BOJ Stats
 
 <div align="center">
   
@@ -59,17 +54,10 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&color=BDBDC8&height=150&section=footer" />
 </div>
 
-
-
-<--
-
+<!--
 ## 🚀 About Me
-- 🌱  ...
-- 👯  ...
-- 💬  ...
-- 📫 ...
--
--
-  
-  
-  -->
+- 🌱 I'm currently learning ...
+- 👯 I'm looking to collaborate on ...
+- 💬 Ask me about ...
+- 📫 How to reach me: ...
+-->
