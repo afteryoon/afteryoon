@@ -29,14 +29,14 @@
 
 ## 📊 Stats
 
-<div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=afteryoon&layout=compact&langs_count=8&theme=dark"/>
+<div align="center" style="display:flex; flex-direction:row;">
+  <div>
+    <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=afteryoon&layout=compact&langs_count=8&theme=dark"/>
+  </div>
 </div>
-
-<div align="center">
-  
+<div>
   [![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=khsso10)](https://solved.ac/khsso10)
-  
+ </div>
 </div>
 
 ## 📝 Latest Blog Posts
