@@ -3,7 +3,9 @@
   <div>
     <img src="https://capsule-render.vercel.app/api?type=waving&color=BDBDC8&height=150&section=header" />
 
-    <img alt="algorithms" src="http://mazassumnida.wtf/api/v2/generate_badge?boj=khsso10" width="42%" height="100%"/>
+    [![Solved.ac
+프로필](http://mazassumnida.wtf/api/v2/generate_badge?boj=khsso10)](https://solved.ac/khsso10)
+   // <img alt="algorithms" src="http://mazassumnida.wtf/api/v2/generate_badge?boj=khsso10" width="42%" height="100%"/>
     <img height=200 align="left"src="https://github-readme-stats.vercel.app/api/top-langs/?username=afteryoon&hide=c%23,powershell,Mathematica,Ruby,Objective-C,Objective-C%2b%2b,Cuda&title_color=61dafb&text_color=ffffff&icon_color=61dafb&bg_color=20232a&langs_count=8&layout=compact&border_color=61dafb&hide_border=true&size_weight=0.5&count_weight=0.5"/>
   </div>
 
