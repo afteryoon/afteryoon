@@ -1,30 +1,46 @@
-## afteryoon!
+# 👋 Hi there, I'm afteryoon!
+
 <div align="center">
-  <div>
-    <img src="https://capsule-render.vercel.app/api?type=waving&color=BDBDC8&height=150&section=header" />
-    [![Solved.ac프로필](http://mazassumnida.wtf/api/v2/generate_badge?boj=afteryoon)](https://solved.ac/afteryoon)
-    
-    <img height=200 align="left"src="https://github-readme-stats.vercel.app/api/top-langs/?username=afteryoon&hide=c%23,powershell,Mathematica,Ruby,Objective-C,Objective-C%2b%2b,Cuda&title_color=61dafb&text_color=ffffff&icon_color=61dafb&bg_color=20232a&langs_count=8&layout=compact&border_color=61dafb&hide_border=true&size_weight=0.5&count_weight=0.5"/>
-  </div>
-
-  <h3>blog</h3>
-  [![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api/list?name=afteryoon)](https://velog.io/@afteryoon)
-
-
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=afteryoon)](https://github.com/anuraghazra/github-readme-stats)
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=BDBDC8&height=150&section=footer" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=BDBDC8&height=150&section=header" />
 </div>
-<!--
-**afteryoon/afteryoon** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
+## 🚀 About Me
+- 🌱 I'm currently learning ...
+- 👯 I'm looking to collaborate on ...
 - 💬 Ask me about ...
 - 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+
+## 🛠 Skills
+<p align="center">
+  <!-- Add your skills icons here -->
+</p>
+
+## 📊 GitHub Stats
+
+<div align="center">
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=afteryoon&show_icons=true&theme=dark&include_all_commits=true&count_private=true"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=afteryoon&layout=compact&langs_count=8&theme=dark"/>
+</div>
+
+## 🏆 BOJ Stats
+
+<div align="center">
+  
+  [![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=afteryoon)](https://solved.ac/afteryoon)
+  
+</div>
+
+## 📝 Latest Blog Posts
+
+<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:END -->
+
+<div align="center">
+  
+  [![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api/list?name=afteryoon)](https://velog.io/@afteryoon)
+  
+</div>
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=BDBDC8&height=150&section=footer" />
+</div>
