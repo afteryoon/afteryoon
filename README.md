@@ -1,41 +1,65 @@
-# 👋 afteryoon!
-
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=BDBDC8&height=150&section=header" />
+
+# afteryoon.
+
+**Backend Engineer · Java / Spring Ecosystem**
+
+서버 사이드 개발을 즐기는 백엔드 엔지니어입니다.  
+안정적인 API 설계와 성능 최적화에 관심이 많습니다.
+
+[![Velog](https://img.shields.io/badge/Velog-20C997?style=flat-square&logo=velog&logoColor=white)](https://velog.io/@afteryoon)
+[![Solved.ac](https://img.shields.io/badge/Solved.ac-Profile-blue?style=flat-square)](https://solved.ac/khsso10)
+
 </div>
 
-## 🛠 Skills
+---
 
-### Languages
-![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+## 🙋 About Me
 
-### Frameworks & Libraries
-![Spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
-![Spring Security](https://img.shields.io/badge/Spring_Security-6DB33F?style=for-the-badge&logo=spring-security&logoColor=white)
-![JPA](https://img.shields.io/badge/JPA-59666C?style=for-the-badge&logo=hibernate&logoColor=white)
-![MyBatis](https://img.shields.io/badge/MyBatis-000000?style=for-the-badge&logo=mybatis&logoColor=white)
+| | |
+|---|---|
+| ⚙️ **Backend Focus** | Spring Boot 기반 REST API 설계 및 JPA / MyBatis ORM 활용에 집중합니다 |
+| 🔐 **Security & Auth** | Spring Security + JWT 인증/인가, Redis 세션 관리 경험 |
+| 🐳 **DevOps Interest** | Docker 컨테이너화와 Linux 환경 배포 및 운영에 관심을 두고 있습니다 |
 
-### Databases
-![Oracle](https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+---
 
-### DevOps & Tools
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+## 🛠 Tech Stack
+
+**Languages**  
+![Java](https://img.shields.io/badge/Java-007396?style=flat-square&logo=openjdk&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+
+**Frameworks**  
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
+![Spring Security](https://img.shields.io/badge/Spring_Security-6DB33F?style=flat-square&logo=springsecurity&logoColor=white)
+![JPA](https://img.shields.io/badge/JPA-59666C?style=flat-square&logo=hibernate&logoColor=white)
+![MyBatis](https://img.shields.io/badge/MyBatis-000000?style=flat-square)
+
+**Databases**  
+![Oracle](https://img.shields.io/badge/Oracle-F80000?style=flat-square&logo=oracle&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
+
+**DevOps & Tools**  
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
+
+---
 
 ## 📊 Stats
 
-<div align="center" style="display:flex; flex-direction:row;">
-  <div>
-    <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=afteryoon&layout=compact&langs_count=8&theme=dark"/>
-  </div>
+<div align="center">
+  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=afteryoon&layout=compact&langs_count=6&theme=default&hide_border=true" />
+  &nbsp;
+  <a href="https://solved.ac/khsso10">
+    <img height="160" src="http://mazassumnida.wtf/api/v2/generate_badge?boj=khsso10" />
+  </a>
+</div>
 
-  [![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=khsso10)](https://solved.ac/khsso10)
-
+---
 
 ## 📝 Blog Posts
 
@@ -43,19 +67,7 @@
 <!-- BLOG-POST-LIST:END -->
 
 <div align="center">
-  
-  [![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api/list?name=afteryoon)](https://velog.io/@afteryoon)
-  
-</div>
 
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=BDBDC8&height=150&section=footer" />
-</div>
+[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api/list?name=afteryoon)](https://velog.io/@afteryoon)
 
-<!--
-## 🚀 About Me
-- 🌱 I'm currently learning ...
-- 👯 I'm looking to collaborate on ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
--->
+</div>
