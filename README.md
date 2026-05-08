@@ -19,7 +19,7 @@
 | | |
 |---|---|
 | ⚙️ **Backend Focus** | Spring Boot 기반 REST API 설계 및 JPA / MyBatis ORM 활용에 집중합니다 |
-| 🔐 **Security & Auth** | Spring Security + JWT 인증/인가, Redis 세션 관리 경험 |
+| 🤝 **Bridge Role** | 비개발자 인터뷰 → 요구사항 정의 → 구현까지 직접 경험한 풀사이클 경험 보유 |
 | 🐳 **DevOps Interest** | Docker 컨테이너화와 Linux 환경 배포 및 운영에 관심을 두고 있습니다 |
 
 ---
