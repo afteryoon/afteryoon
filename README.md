@@ -14,19 +14,13 @@ Java/Spring 백엔드 출신 · AI 에이전트와 함께 기획부터 API, DB, 
 
 ---
 
-## 한 줄로 말하면
-
-프롬프트를 다듬는 시간보다, 검수 단계와 안전장치, 기록, 되돌리기를 설계하는 시간을 더 씁니다. 아래는 그렇게 쌓은 구조들입니다.
-
-| 만든 것 | 만든 양 (직접 센 값) |
-|---|---|
-| 사내 스킬 허브 CLI (동기화·승격·점검·훅 설치) | 하위 명령 12개 |
-| 허브로 기기 간 동기화하는 재사용 스킬 | 20개 |
-| 역할이 나뉜 에이전트 정의 | 11개 |
-| 내 컴퓨터에서 정해진 시간에 도는 예약 작업 | 9개 |
-| 기록으로 남긴 설계 결정 | 약 150건 |
-
-이 숫자는 성과가 아니라 **만든 양**입니다. 하나의 결과물보다, 결과물을 계속 만들어 내는 도구와 자동화를 운영하는 데 무게를 둡니다. 자세한 내용은 3~8장에 적었습니다.
+<div align="center">
+  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=afteryoon&layout=compact&langs_count=6&theme=default&hide_border=true" />
+  &nbsp;
+  <a href="https://solved.ac/khsso10">
+    <img height="160" src="http://mazassumnida.wtf/api/v2/generate_badge?boj=khsso10" />
+  </a>
+</div>
 
 ---
 
@@ -205,18 +199,6 @@ hub contribute→  lint 통과 후 브랜치+PR (main 병합은 사람이 확인
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
 ![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=flat-square&logo=vitest&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
-
----
-
-## 📊 Stats
-
-<div align="center">
-  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=afteryoon&layout=compact&langs_count=6&theme=default&hide_border=true" />
-  &nbsp;
-  <a href="https://solved.ac/khsso10">
-    <img height="160" src="http://mazassumnida.wtf/api/v2/generate_badge?boj=khsso10" />
-  </a>
-</div>
 
 ---
 
