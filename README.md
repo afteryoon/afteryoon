@@ -2,10 +2,9 @@
 
 # afteryoon.
 
-**Backend Engineer · Java / Spring Ecosystem**
+### AI에게 일을 맡기되, 사고는 구조로 막는 백엔드 엔지니어
 
-서버 사이드 개발을 즐기는 백엔드 엔지니어입니다.  
-안정적인 API 설계와 성능 최적화에 관심이 많습니다.
+Java/Spring 백엔드 출신 · 기획부터 API, DB, 서버 운영까지 AI 에이전트와 함께 혼자 끌고 갑니다.
 
 [![Velog](https://img.shields.io/badge/Velog-20C997?style=flat-square&logo=velog&logoColor=white)](https://velog.io/@afteryoon)
 [![Solved.ac](https://img.shields.io/badge/Solved.ac-Profile-blue?style=flat-square)](https://solved.ac/khsso10)
@@ -14,13 +13,133 @@
 
 ---
 
-## 🙋 About Me
+## 한 줄로 말하면
 
-| | |
+모델이 코드를 쓰고 글을 만드는 건 이제 어렵지 않습니다. 어려운 건 **틀렸을 때 어디서 잡히느냐**입니다.
+그래서 저는 프롬프트를 다듬는 시간보다, 검수 단계와 가드, 기록, 되돌리기를 설계하는 시간을 더 씁니다. 아래는 그렇게 쌓은 구조들입니다.
+
+| 만든 것 | 규모 (직접 센 값) |
 |---|---|
-| ⚙️ **Backend Focus** | Spring Boot 기반 REST API 설계 및 JPA / MyBatis ORM 활용에 집중합니다 |
-| 🤝 **Bridge Role** | 비개발자 인터뷰 → 요구사항 정의 → 구현까지 직접 경험한 풀사이클 경험 보유 |
-| 🐳 **DevOps Interest** | Docker 컨테이너화와 Linux 환경 배포 및 운영에 관심을 두고 있습니다 |
+| 재사용 스킬 (사내 허브로 기기 간 동기화) | 20개 |
+| 역할이 나뉜 에이전트 정의 | 11개 |
+| 콘텐츠 관리 시스템 API 명세 | operationId 231개 |
+| DB 마이그레이션 (되돌리기 파일 포함) | 27개 |
+| 테스트 파일 (서버·웹·공용·배포 스크립트) | 780여 개 |
+| 기록으로 남긴 설계 결정 | 약 150건 |
+
+---
+
+## 제가 일하는 방식
+
+```mermaid
+flowchart LR
+    A[기획<br/>질문 라운드로 스펙 확정] --> B[에이전트 조직<br/>PM · 리더 · 실무 노드]
+    B --> C[구현<br/>API · DB · 화면]
+    C --> D{검증 하네스<br/>측정 → 교차 검토 → 재확인}
+    D -- 통과 --> E[사람 승인]
+    D -- 실패 --> B
+    E --> F[배포 · 롤백 가능한 운영]
+    F -.규칙 누적.-> G[스킬 허브]
+    G -.세션 시작 때 주입.-> B
+```
+
+핵심은 **마지막 화살표**입니다. 한 번 겪은 문제는 규칙으로 파일에 남기고, 다음 세션이 시작될 때 자동으로 주입되게 했습니다. 같은 실수를 사람이 기억해서 막는 게 아니라 구조가 막습니다.
+
+---
+
+## 1. 기획: 구현 전에 질문부터
+
+- **질문 라운드(grill-plan)**: 한 라운드에 질문 3~4개, 질문마다 제 추천 답을 같이 제시하고, 답은 그 자리에서 기록합니다. 이해가 맞춰지기 전에는 구현에 들어가지 않습니다.
+- **결정 기록**: `[결정] [이유] [대안] [선택한 이유]` 형식으로 남기고, 번호는 영구입니다. 결정을 뒤집을 때도 지우지 않고 "새 번호로 대체"라고 씁니다. 나중에 "왜 이렇게 했지?"에 답할 수 있습니다.
+- **오너에게는 결정만 요청**: 터미널 작업, 복사, 점검은 에이전트가 하고 사람에게는 판단이 필요한 것만 올립니다.
+- **일정은 병렬 기준**: 에이전트가 동시에 일하니 작업일을 더하지 않습니다. 병목은 항상 설계·결정·검수·시험이라고 봅니다.
+
+## 2. 에이전트 관리: 조직처럼 굴리기
+
+에이전트를 한 명에게 다 시키면 컨텍스트가 터지고 검수가 사라집니다. 그래서 회사 조직처럼 나눴습니다.
+
+- **계층**: 오너 → PM → 부서 리더(DB·백엔드·프론트) → 실무 노드. 노드 결과는 리더가 먼저 검수하고, PM이 통합 검수한 뒤 저에게 결정 사항만 올라옵니다.
+- **인사카드 필수**: 이름, 직무, 책임, 기억, 협업 방식, 성과 지표를 갖춰야 만들 수 있습니다.
+- **평가와 교체**: 동료평가·리더 평가·PM의 부서 평가를 1~5점으로 매기고 근거는 시험 실패·재작업·환각 건수로 남깁니다. 환각, 같은 지적 2회 반복, 지표 하락이 이어지면 교체하고 이전 교훈 3줄만 새 에이전트에게 넘깁니다.
+- **디버깅이 맴돌면 세션을 버립니다**: 같은 가설로 3번 실패하거나 6번 실행해도 원인을 못 찾으면 멈추고, 새 에이전트에게 **로그 사실만** 넘깁니다. 틀린 추측이 같이 넘어가는 걸 막기 위해서입니다.
+- **조직 상태는 대화가 아니라 파일**에 둡니다. 명단·점수판·변경 기록을 갱신하고, 세션이 시작될 때 훅이 인수인계 문서를 주입해서 끊겨도 이어집니다.
+- 상위 모델 자문(디렉터)은 막힐 때만, 호출 이유를 먼저 밝히고, 브리프는 40줄 안으로 씁니다.
+
+## 3. 하네스: 검증을 절차로 만들기
+
+"한 번 더 봐줘"를 매번 말로 하지 않으려고 검증 흐름 자체를 스킬로 만들었습니다.
+
+**`verify-sources` (자료 검색·이차검증 하네스)**
+조사 결과를 문서에 쓰기 전에 거치는 7단계입니다. 자료 수집 → 두 검증자가 **주장과 출처만 받아서** 블라인드로 교차검증(상대 판정은 가림) → 라운드 마감 → 사람 승인 → 쟁점만 재검증 → 채택. 최대 3라운드이고, 의견이 갈린 건 검증자가 단독으로 확정하지 않고 사람이 정합니다.
+
+**`uiux-harness-review` (화면·문구 점검 하네스)**
+Claude가 화면을 측정하고 문구를 감사하면, GPT가 독립적으로 검토하고, **서로의 지적을 원본으로 다시 확인한 것만** 고칩니다. 둘이 같이 틀리는 경우를 줄이려는 구조입니다. 화면을 바꾸는 모든 작업의 끝에는 6줄짜리 경량 점검을 돌리고, 릴리스 전에는 전체 7단계를 돌립니다.
+
+**하네스 고도화 순환**
+출력 → 피드백(제 의견, 내부 검수, 외부 GPT) → 판단(반영·보류·기각) → 기록 → 버전업. 외부 모델에 보내기 전에는 누출 점검을 거치고, 읽기 전용·저장 안 함 호출로 제한합니다.
+
+한 가지 배운 점도 적어둡니다. 점검기가 지적한 대로 문장을 전부 자동 반영했더니 오히려 **자연스러움 점수가 떨어졌습니다.** 그래서 지적은 후보로만 받고, 반영 여부는 판단 단계를 거치게 바꿨습니다.
+
+## 4. 스킬 관리: 노하우를 자산으로
+
+한 프로젝트에서 얻은 요령을 다음 프로젝트에서 다시 발견하는 일이 싫어서, 허브 저장소 하나를 단일 원본으로 두었습니다.
+
+```
+hub new       →  staging 에 틀 생성, evals/ 에 평가 사례 작성
+hub promote   →  평가 파일이 없으면 승격 거부 (예외는 사유를 기록에 남김)
+hub bump      →  이미 있는 스킬은 버전 올릴 때만 수정
+hub sync      →  기기 간 동기화, 충돌은 덮어쓰지 않고 inbox 에 보관 → 병합 스킬이 합집합 정리
+hub contribute→  lint 통과 후 브랜치+PR (main 병합은 사람이 확인)
+```
+
+- **세션 시작 훅**이 "이 작업엔 이 스킬부터"라는 기본 적용표를 주입합니다. 화면 작업이면 접근성·CSS 시스템 스킬을, LLM 입출력이면 보안 점검 스킬을 먼저 읽게 됩니다.
+- **커밋 전 훅**이 비밀값, 내 컴퓨터 절대경로, 큰 파일을 막습니다. 실패하면 커밋이 안 됩니다.
+- 솔직히 말하면 지금 스킬 20개의 평가셋은 아직 대부분 작성 전입니다. "평가 없이는 승격 못 한다"는 구조는 만들었고, 사례를 채우는 중입니다.
+
+**대표 스킬**
+
+| 스킬 | 하는 일 |
+|---|---|
+| `llm-io-security-audit` | 프롬프트로 들어가는 값과 모델이 내놓은 값을 **실제 호출 없이** 점검 (주입, 위험 출력, 로그 유출) |
+| `llm-response-replay-corpus` | 모델 응답을 파일로 모아 파서·검증기를 재생. 유료 호출 전에 구멍을 찾음 |
+| `staged-publisher-fake-fetch-testing` | 컨테이너 생성 → 확인 → 게시처럼 단계가 나뉜 게시 API를 가짜 서버로 시험 |
+| `db-seed-reset-rehearsal` | DB 시드를 넣고 되돌리는 연습을 먼저 수행 |
+| `craft-webapp-testing` | 화면을 실제로 열어 정렬·접근성·폭별 스크린샷을 측정. 못 돌린 검사는 못 돌렸다고 적음 |
+
+## 5. QA·버그 검증: "통과했다"를 증명하게 하기
+
+- **수정 전 실패를 먼저 보입니다.** 버그 수정에는 "수정 전에 실패하는 시험"을 같이 요구하고, 불가능하면 사유를 적게 합니다.
+- **외부 호출은 가짜 서버로 시험합니다.** 정해 둔 답을 순서대로 돌려주고, 정의하지 않은 호출이 오면 시험이 실패합니다. 게시 직전 단계, 응답이 끊겼을 때 **재호출하지 않는지**까지 확인합니다.
+- **테스트 층**: 단위(서버·웹·공용 패키지), 임시 DB 위의 통합, E2E, 배포 셸 스크립트 시험. 사람이 보는 검수 시나리오는 185건을 따로 둡니다.
+- **문제 누적 규칙**: 제작하다 터진 문제를 `[날짜][항목] 문제 → 규칙` 한 줄로 쌓고, 다음 생성 프롬프트에 자동으로 넣습니다.
+- **AI 생성물 규제 기준은 코드 한곳에**: AI 고지 위치와 근거 없는 1인칭 체험담 표현을 하나의 기준 모듈이 검사하고, 어느 경로로 만든 결과든 같은 검사를 지나갑니다. 법률 검토 문서와 코드 기준이 어긋나지 않게 맞춥니다.
+- 아직 못 한 것: 화면 시각 회귀의 자동 비교는 도입 전입니다. 지금은 스크린샷 측정과 사람 확인으로 대신합니다.
+
+## 6. API 엔지니어링
+
+- **계약 먼저**: OpenAPI 명세를 정본으로 두고(operationId 고유, summary·description 필수, 미사용 컴포넌트 금지를 린트로 강제) 서버와 화면이 **공용 패키지**의 상태값·달력 계산을 같이 씁니다. 서버를 띄우기 전에 빌드 산출물이 소스와 일치하는지 확인합니다.
+- **외부 호출 가드**: 허용 호스트만 통과, https 강제, IP 직접 표기 차단, DNS 재확인. 확정되지 않은 카드는 게시 API에서 409로 거절합니다.
+- **자동화는 꺼진 채로 시작**: 게시 스케줄러 기본값은 꺼짐이고, 켜는 건 사람입니다.
+- **운영 중 모델 호출을 줄이는 설계**: 원문을 상위 에이전트가 미리 정제해 DB에 쌓고, 운영에서는 불러다 쓰기만 합니다. 만화 소재는 호출 0이 목표였고 코드에서 차단·계측합니다. 재사용 가능한 원문 범위는 4등급으로 나눴습니다.
+
+## 7. 서버 관리: AI에게 맡기되 되돌릴 수 있게
+
+- **배포**: VM 한 대에서 Docker Compose(API, 웹, DB 프록시), 리버스 프록시, 비밀값은 시크릿 매니저에서 `.env`로 생성합니다. 이미지는 CI가 빌드하고, 반영은 커밋 SHA를 지정한 수동 배포입니다. 자동 배포는 의도적으로 꺼 두었습니다.
+- **롤백 경로 상시 확보**: 직전 버전 또는 지정 SHA로 되돌리는 스크립트가 있고, 모든 마이그레이션에 되돌리기 파일을 둡니다. 되돌리기가 불가능한 변경은 "이전 버전으로 서버를 내리고 새 번호로 고친다"는 규칙을 문서화했습니다.
+- **위험한 SQL 차단**: 마이그레이션 가드가 DROP, TRUNCATE, 조건 없는 DELETE/UPDATE를 막습니다. 운영 반영은 패키지 해시를 고정한 뒤 사람이 확인하고 실행합니다.
+- **백업과 복구**: 덤프를 원격 버킷에 올려 30일 보존하고, 최근 백업의 나이를 확인하는 스크립트가 있습니다. 배포 전 스냅샷과 복구 비교 절차도 런북에 있습니다.
+- **DB 이관**: 서버리스 PostgreSQL에서 관리형 DB로 옮기면서 스키마 체크섬 일치를 검증했고, 계정 권한 문제를 만나 기록으로 남겼습니다.
+- **AI가 운영 DB를 만질 때**: 조회는 읽기 전용 트랜잭션으로 제한하고, 임시 자격 파일은 쓴 뒤 지웁니다.
+
+---
+
+## 🧪 이 구조로 만든 프로젝트 (모두 비공개)
+
+- **콘텐츠 생성·게시 관리 시스템**: NestJS + Next.js + PostgreSQL. AI가 만든 글·카드뉴스·만화를 사람이 승인해야만 인스타그램·페이스북에 게시되고, 네이버는 복사용 패키지로 내보냅니다. 발행 달력 규칙을 서버 순수 함수로 만들어 테스트로 고정했습니다.
+- **영상 제작 파이프라인**: Python(FastAPI). 주제 → 대본 → 장면 → 음성·자막 → 사람 승인 → 비공개 업로드. 자동 승인과 자동 공개는 만들지 않았습니다.
+- **에이전트 관제실**: 병렬로 도는 Claude Code 세션의 상태와 결정 대기를 한 화면에 보는 읽기 전용 로컬 앱(Next.js, TypeScript). 비밀값은 키체인에 두고 내 컴퓨터 안에서만 열립니다.
+
+회사 내부용이라 저장소는 공개하지 못하지만, 구조와 판단 이유는 얼마든지 설명드릴 수 있습니다.
 
 ---
 
@@ -28,24 +147,30 @@
 
 **Languages**  
 ![Java](https://img.shields.io/badge/Java-007396?style=flat-square&logo=openjdk&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white)
 
-**Frameworks**  
+**Backend & Frontend**  
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
-![Spring Security](https://img.shields.io/badge/Spring_Security-6DB33F?style=flat-square&logo=springsecurity&logoColor=white)
-![JPA](https://img.shields.io/badge/JPA-59666C?style=flat-square&logo=hibernate&logoColor=white)
-![MyBatis](https://img.shields.io/badge/MyBatis-000000?style=flat-square)
+![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
+![OpenAPI](https://img.shields.io/badge/OpenAPI-6BA539?style=flat-square&logo=openapiinitiative&logoColor=white)
 
-**Databases**  
+**Data**  
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
 ![Oracle](https://img.shields.io/badge/Oracle-F80000?style=flat-square&logo=oracle&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
 
-**DevOps & Tools**  
+**AI · Infra · Tools**  
+![Claude Code](https://img.shields.io/badge/Claude_Code-D97757?style=flat-square&logo=anthropic&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
+![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=flat-square&logo=vitest&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
 
 ---
 
@@ -71,3 +196,14 @@
 [![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api/list?name=afteryoon)](https://velog.io/@afteryoon)
 
 </div>
+
+---
+
+## 💬 이런 이야기라면 언제든 환영입니다
+
+- 에이전트 여러 개를 굴릴 때 검수와 책임을 어떻게 나누는지
+- LLM 입출력을 실제 호출 없이 시험하는 방법
+- AI가 운영 서버와 DB를 만질 때 어디까지 맡기고 무엇을 막는지
+- Java/Spring 백엔드가 AI 시대에 어떤 역할로 넓혀 갈 수 있는지
+
+<!-- 연락처(이메일 등)는 공개 여부를 정한 뒤 이 자리에 추가 -->
