@@ -12,9 +12,20 @@ Java/Spring 백엔드 출신 · AI 에이전트와 함께 기획부터 API, DB, 
 
 </div>
 
+
 ---
 
-## 한 줄로 말하면
+## 📊 Stats
+
+<div align="center">
+  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=afteryoon&layout=compact&langs_count=6&theme=default&hide_border=true" />
+  &nbsp;
+  <a href="https://solved.ac/khsso10">
+    <img height="160" src="http://mazassumnida.wtf/api/v2/generate_badge?boj=khsso10" />
+  </a>
+</div>
+
+---
 
 프롬프트를 다듬는 시간보다, 검수 단계와 안전장치, 기록, 되돌리기를 설계하는 시간을 더 씁니다. 아래는 그렇게 쌓은 구조들입니다.
 
@@ -206,17 +217,7 @@ hub contribute→  lint 통과 후 브랜치+PR (main 병합은 사람이 확인
 ![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=flat-square&logo=vitest&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
 
----
 
-## 📊 Stats
-
-<div align="center">
-  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=afteryoon&layout=compact&langs_count=6&theme=default&hide_border=true" />
-  &nbsp;
-  <a href="https://solved.ac/khsso10">
-    <img height="160" src="http://mazassumnida.wtf/api/v2/generate_badge?boj=khsso10" />
-  </a>
-</div>
 
 ---
 
