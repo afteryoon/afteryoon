@@ -7,7 +7,6 @@ on:
   push:
     branches:
       - main
-      - readme-mock-v3 # 목업 검수용 (main 병합 전에 이 줄 삭제)
 
 permissions:
   contents: write
